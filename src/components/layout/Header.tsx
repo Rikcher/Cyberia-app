@@ -16,6 +16,7 @@ const Header: React.FC = () => {
                     { label: "Контакты", path: "/contacts" },
                 ]}
             />
+            <p style={{ color: "white" }}>EN/RU</p>
         </StyledHeader>
     );
 };
