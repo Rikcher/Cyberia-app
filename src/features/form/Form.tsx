@@ -1,6 +1,7 @@
 import { FormProvider, useForm } from "react-hook-form";
 import InputField from "./components/InputField";
 import StyledForm from "./styles/StyledForm";
+import Checkbox from "../../components/ui/Checkbox";
 
 interface FormProps {
     marginBot: number;
@@ -23,7 +24,10 @@ const Form: React.FC<FormProps> = ({ marginBot }) => {
                     <InputField label="Телефон" />
                 </div>
                 <InputField label="Сообщение" isTextArea />
-                <div>lol</div>
+                <Checkbox
+                    uid="terms-checkbox"
+                    label="Согласие на обработку персональных данных"
+                />
             </FormProvider>
         </StyledForm>
     );
