@@ -2,6 +2,7 @@ import { useProjects } from "../services/quries";
 import { Project } from "../types";
 import CaseCard from "./CaseCard";
 import StyledCasesList from "../styles/StyledCasesList";
+import { caseDescription } from "../../../shared/casesData"; // Instead of project.description
 
 const CasesList = () => {
     const { data, isError, isLoading } = useProjects();
@@ -20,6 +21,7 @@ const CasesList = () => {
                     key={project.id}
                     bgImgUrl={project.image}
                     title={project.title}
+                    description={caseDescription}
                 />
             ))}
         </StyledCasesList>
