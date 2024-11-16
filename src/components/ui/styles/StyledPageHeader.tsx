@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const StyledPageHeader = styled.h1<{ $marginBot: number }>`
+const StyledPageHeader = styled.h2<{ $marginBot: number }>`
     font-size: 3rem;
     font-weight: 600;
     color: #eef3ff;
