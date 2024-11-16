@@ -5,12 +5,13 @@ import StyledCasesList from "../styles/StyledCasesList";
 import { caseDescription } from "../../../shared/casesData"; // Instead of project.description
 import { filterProjects } from "../utils/filterProjects";
 import useFilterStore from "../services/store";
+import CasesListPlaceholder from "./ui/CasesListPlaceholder";
 
 const CasesList = () => {
     const { data, isError, isLoading } = useProjects();
     const { selectedFilterId } = useFilterStore();
 
-    if (isLoading) return <div>Loading...</div>;
+    if (isLoading) return <CasesListPlaceholder length={6} />;
 
     if (isError) return <div>Error fetching data</div>;
 
