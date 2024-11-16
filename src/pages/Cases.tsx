@@ -7,8 +7,8 @@ const Cases: React.FC = () => {
 
     return (
         <>
-            <PageHeader headerText={pageName} />
-            <CasesOverview />
+            <PageHeader headerText={pageName} marginBot={4} />
+            <CasesOverview marginBot={6.25} />
         </>
     );
 };
