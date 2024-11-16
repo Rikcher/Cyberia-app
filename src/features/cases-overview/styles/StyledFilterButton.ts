@@ -8,11 +8,14 @@ const StyledFilterButton = styled.button`
     padding: 0.625rem 1.875rem;
     border-radius: 7px;
     background-color: ${({theme}) => theme.colors.primary};
-    transition: color 0.3s ease-in-out;
+    cursor: pointer;
 
-    &:hover {
-        cursor: pointer;
-        color: ${({theme}) => theme.colors.accent};
+    &:not(.active):hover {
+        color: ${({ theme }) => theme.colors.accent};
+    }
+
+    &.active {
+        background-color: ${({ theme }) => theme.colors.accent};
     }
 `
 
