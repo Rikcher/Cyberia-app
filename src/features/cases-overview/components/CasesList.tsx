@@ -1,4 +1,4 @@
-import { useProjects } from "../services/quries";
+import { useProjects } from "../hooks/useProjects";
 import { Project } from "../types";
 import CaseCard from "./CaseCard";
 import StyledCasesList from "../styles/StyledCasesList";

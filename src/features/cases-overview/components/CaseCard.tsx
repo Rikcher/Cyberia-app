@@ -1,6 +1,6 @@
 import StyledCaseCard from "../styles/StyledCaseCard";
 import CardTitle from "./ui/CardTitle";
-import CardHover from "./ui/CardHover";
+import StyledCardHover from "../styles/StyledCardHover";
 
 interface CaseCardProps {
     bgImgUrl: string;
@@ -16,7 +16,7 @@ const CaseCard: React.FC<CaseCardProps> = ({
     return (
         <StyledCaseCard $bgImgUrl={bgImgUrl}>
             <CardTitle text={title} />
-            <CardHover text={description} />
+            <StyledCardHover>{description}</StyledCardHover>
         </StyledCaseCard>
     );
 };

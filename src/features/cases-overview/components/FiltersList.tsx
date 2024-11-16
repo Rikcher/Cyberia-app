@@ -1,4 +1,4 @@
-import { useFilters } from "../services/quries";
+import { useFilters } from "../hooks/useFilters";
 import FilterButton from "./ui/FilterButton";
 import { Filter } from "../types";
 import StyledFiltersList from "../styles/StyledFiltersList";
