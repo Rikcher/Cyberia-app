@@ -1,16 +1,16 @@
 import { FormProvider, useForm } from "react-hook-form";
-import InputField from "./components/InputField";
-import StyledForm from "./styles/StyledForm";
-import Checkbox from "../../components/ui/Checkbox";
+import InputField from "../../shared/components/ui/InputField";
+import StyledContactForm from "./styles/StyledContactForm";
+import Checkbox from "../../shared/components/ui/Checkbox";
 
-interface FormProps {
+interface ContactFormProps {
     marginBot: number;
 }
 
-const Form: React.FC<FormProps> = ({ marginBot }) => {
+const ContactForm: React.FC<ContactFormProps> = ({ marginBot }) => {
     const methods = useForm();
     return (
-        <StyledForm $marginBot={marginBot}>
+        <StyledContactForm $marginBot={marginBot}>
             <FormProvider {...methods}>
                 <div
                     style={{
@@ -29,8 +29,8 @@ const Form: React.FC<FormProps> = ({ marginBot }) => {
                     label="Согласие на обработку персональных данных"
                 />
             </FormProvider>
-        </StyledForm>
+        </StyledContactForm>
     );
 };
 
-export default Form;
+export default ContactForm;

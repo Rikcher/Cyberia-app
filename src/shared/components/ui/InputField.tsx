@@ -1,7 +1,7 @@
-import StyledFieldset from "../styles/StyledFieldset";
-import StyledInputField from "../styles/StyledInputField";
-import StyledLegend from "../styles/StyledLegend";
-import StyledTextArea from "../styles/StyledTextArea";
+import StyledFieldset from "./styles/StyledFieldset";
+import StyledInputField from "./styles/StyledInputField";
+import StyledLegend from "./styles/StyledLegend";
+import StyledTextArea from "./styles/StyledTextArea";
 
 interface InputFieldProps {
     label: string;

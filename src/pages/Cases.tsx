@@ -1,7 +1,7 @@
-import PageHeader from "../components/ui/PageHeader";
+import PageHeader from "../shared/components/ui/PageHeader";
 import usePageName from "../hooks/usePageName";
 import CasesOverview from "../features/cases-overview/CasesOverview";
-import Form from "../features/form/Form";
+import ContactForm from "../features/contact-form/ContactForm";
 
 const Cases: React.FC = () => {
     const pageName = usePageName();
@@ -14,7 +14,7 @@ const Cases: React.FC = () => {
                 headerText={"Расскажите о вашем проекте:"}
                 marginBot={4.875}
             />
-            <Form marginBot={6.25} />
+            <ContactForm marginBot={6.25} />
         </>
     );
 };
