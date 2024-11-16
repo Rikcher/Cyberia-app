@@ -1,8 +1,8 @@
-import { FormProvider, useForm } from "react-hook-form";
+import { FieldValues, FormProvider, useForm } from "react-hook-form";
 import InputField from "../../shared/components/ui/InputField";
-import StyledContactForm from "./styles/StyledContactForm";
 import Checkbox from "../../shared/components/ui/Checkbox";
 import SubmitButton from "../../shared/components/ui/SubmitButton";
+import { useSendFeedback } from "./hooks/useSendFeedback";
 
 interface ContactFormProps {
     marginBot: number;
@@ -10,30 +10,49 @@ interface ContactFormProps {
 
 const ContactForm: React.FC<ContactFormProps> = ({ marginBot }) => {
     const methods = useForm();
+
+    const { mutateAsync } = useSendFeedback();
+
+    const onSubmit = async (data: FieldValues) => {
+        try {
+            await mutateAsync(data);
+        } catch (error) {
+            console.error("Error submitting feedback", error);
+        }
+    };
     return (
-        <StyledContactForm $marginBot={marginBot}>
+        <div style={{ marginBottom: `${marginBot}rem` }}>
             <FormProvider {...methods}>
-                <div
+                <form
+                    onSubmit={methods.handleSubmit(onSubmit)}
                     style={{
                         display: "flex",
-                        justifyContent: "space-between",
+                        flexDirection: "column",
                         gap: "2.5rem",
                     }}
                 >
-                    <InputField label="Ваше Имя" />
-                    <InputField label="Email" />
-                    <InputField label="Телефон" />
-                </div>
-                <InputField label="Сообщение" isTextArea />
-                <Checkbox
-                    uid="terms-checkbox"
-                    label="Согласие на обработку персональных данных"
-                />
-                <div style={{ margin: "1.5rem auto 0 auto" }}>
-                    <SubmitButton label="Обсудить проект" />
-                </div>
+                    <div
+                        style={{
+                            display: "flex",
+                            justifyContent: "space-between",
+                            gap: "2.5rem",
+                        }}
+                    >
+                        <InputField label="Ваше Имя" name="name" />
+                        <InputField label="Email" name="email" />
+                        <InputField label="Телефон" name="phone" />
+                    </div>
+                    <InputField label="Сообщение" name="message" isTextArea />
+                    <Checkbox
+                        uid="terms-checkbox"
+                        label="Согласие на обработку персональных данных"
+                    />
+                    <div style={{ margin: "1.5rem auto 0 auto" }}>
+                        <SubmitButton label="Обсудить проект" />
+                    </div>
+                </form>
             </FormProvider>
-        </StyledContactForm>
+        </div>
     );
 };
 
