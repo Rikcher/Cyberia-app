@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import StyledNav from "./styles/StyledNav";
 
 interface Page {
     label: string;
@@ -7,13 +6,12 @@ interface Page {
 }
 
 interface NavProps {
-    type: "header" | "footer";
     pages: Page[];
 }
 
-const Nav: React.FC<NavProps> = ({ type, pages }) => {
+const Nav: React.FC<NavProps> = ({ pages }) => {
     return (
-        <StyledNav type={type}>
+        <>
             {pages.map((page) => (
                 <Link
                     key={`${page.label}-page`}
@@ -24,7 +22,7 @@ const Nav: React.FC<NavProps> = ({ type, pages }) => {
                     {page.label}
                 </Link>
             ))}
-        </StyledNav>
+        </>
     );
 };
 
