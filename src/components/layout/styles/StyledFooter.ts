@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const StyledFooter = styled.footer`
-    background-color: #313341;
+    background-color: ${({theme}) => theme.colors.primary};
     width: 100%;
     padding: 7.625rem 1.5rem 8.875rem 1.5rem;
     color: ${({ theme }) => theme.colors.text};

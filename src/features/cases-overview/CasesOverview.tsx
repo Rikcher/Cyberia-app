@@ -1,4 +1,4 @@
-import Filters from "./components/Filters";
+import FiltersList from "./components/FiltersList";
 import CasesList from "./components/CasesList";
 
 interface CasesOverviewProps {
@@ -8,7 +8,7 @@ interface CasesOverviewProps {
 const CasesOverview: React.FC<CasesOverviewProps> = ({ marginBot }) => {
     return (
         <div style={{ marginBottom: `${marginBot}rem` }}>
-            <Filters />
+            <FiltersList />
             <CasesList />
         </div>
     );
