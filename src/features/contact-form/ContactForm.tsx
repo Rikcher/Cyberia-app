@@ -3,6 +3,7 @@ import InputField from "../../shared/components/ui/InputField";
 import Checkbox from "../../shared/components/ui/Checkbox";
 import SubmitButton from "../../shared/components/ui/SubmitButton";
 import { useSendFeedback } from "./hooks/useSendFeedback";
+import { EMAIL_REGEX, PHONE_REGEX } from "../../utils/regexUtils";
 
 interface ContactFormProps {
     marginBot: number;
@@ -39,8 +40,26 @@ const ContactForm: React.FC<ContactFormProps> = ({ marginBot }) => {
                         }}
                     >
                         <InputField label="Ваше Имя" name="name" />
-                        <InputField label="Email" name="email" />
-                        <InputField label="Телефон" name="phone" />
+                        <InputField
+                            label="Email"
+                            name="email"
+                            validationRule={{
+                                pattern: {
+                                    value: EMAIL_REGEX,
+                                    message: "Please enter valid email",
+                                },
+                            }}
+                        />
+                        <InputField
+                            label="Телефон"
+                            name="phone"
+                            validationRule={{
+                                pattern: {
+                                    value: PHONE_REGEX,
+                                    message: "Please enter valid phone number",
+                                },
+                            }}
+                        />
                     </div>
                     <InputField label="Сообщение" name="message" isTextArea />
                     <Checkbox

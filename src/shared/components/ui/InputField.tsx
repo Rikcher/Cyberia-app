@@ -10,9 +10,15 @@ interface InputFieldProps {
     label: string;
     name: string;
     isTextArea?: boolean;
+    validationRule?: { pattern: { value: RegExp; message: string } };
 }
 
-const InputField: React.FC<InputFieldProps> = ({ label, isTextArea, name }) => {
+const InputField: React.FC<InputFieldProps> = ({
+    label,
+    isTextArea,
+    name,
+    validationRule,
+}) => {
     const {
         register,
         formState: { errors },
@@ -27,12 +33,14 @@ const InputField: React.FC<InputFieldProps> = ({ label, isTextArea, name }) => {
                         rows={5}
                         {...register(name, {
                             required: "Please fill in this field",
+                            ...validationRule,
                         })}
                     />
                 ) : (
                     <StyledInput
                         {...register(name, {
                             required: "Please fill in this field",
+                            ...validationRule,
                         })}
                     />
                 )}
