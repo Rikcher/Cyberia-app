@@ -1,7 +1,15 @@
 import styled, { css } from "styled-components";
 import { pulse } from "../../../styles/animations";
+import { DoubleCircleHover } from "../../../styles/hoverStyles";
 
-const StyledSubmitButton = styled.button.attrs({type: "submit"})<{$disabled: boolean}>`
+
+export const StyledLabel = styled.p`
+    position: relative;
+    z-index: 3;
+    transition: scale 0.3s ease-in-out 0.3s;
+`
+
+export const StyledSubmitButton = styled.button.attrs({type: "submit"})<{$disabled: boolean}>`
     background-color: ${({theme}) => theme.colors.accent};
     border: none;
     font-family: inherit;
@@ -22,8 +30,11 @@ const StyledSubmitButton = styled.button.attrs({type: "submit"})<{$disabled: boo
     pointer-events: ${({ $disabled }) =>
         $disabled && "none"};
 
-    &:hover{
-        background-color: ${({theme}) => theme.colors.accentHover};
+    ${DoubleCircleHover}
+
+    &:hover {
+        ${StyledLabel} {
+            scale: 1.3;
+        }
     }
 `
-export default StyledSubmitButton

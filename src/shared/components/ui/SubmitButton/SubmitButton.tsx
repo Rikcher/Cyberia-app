@@ -1,5 +1,5 @@
 import { useFormContext } from "react-hook-form";
-import StyledSubmitButton from "./SubmitButton.styles";
+import { StyledSubmitButton, StyledLabel } from "./SubmitButton.styles";
 
 interface SubmitButtonProps {
     label: string;
@@ -11,7 +11,7 @@ const SubmitButton: React.FC<SubmitButtonProps> = ({ label }) => {
 
     return (
         <StyledSubmitButton $disabled={isSubmitting}>
-            {label}
+            <StyledLabel>{label}</StyledLabel>
         </StyledSubmitButton>
     );
 };
