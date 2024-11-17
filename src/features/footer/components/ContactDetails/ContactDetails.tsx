@@ -1,4 +1,4 @@
-import StyledContactDetails from "../styles/StyledContactDetails";
+import StyledContactDetails from "./StyledContactDetails";
 
 const ContactDetails = () => {
     return (

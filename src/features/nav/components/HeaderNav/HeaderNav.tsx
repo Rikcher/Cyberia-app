@@ -1,6 +1,6 @@
-import StyledHeaderNav from "../styles/StyledHeaderNav";
-import Nav from "./Nav";
-import { commonPages } from "../../../shared/utils/navigationData";
+import StyledHeaderNav from "./StyledHeaderNav";
+import Nav from "../Nav";
+import { commonPages } from "../../../../shared/utils/navigationData";
 
 const HeaderNav = () => {
     return (

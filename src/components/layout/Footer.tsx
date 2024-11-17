@@ -1,9 +1,9 @@
 import React from "react";
 import StyledFooter from "./styles/StyledFooter";
-import GeneralInformation from "../../features/footer/components/GeneralInformation";
-import ContactDetails from "../../features/footer/components/ContactDetails";
-import LegalLinks from "../../features/footer/components/LegalLinks";
-import FooterNav from "../../features/nav/components/FooterNav";
+import GeneralInformation from "../../features/footer/components/GeneralInformation/GeneralInformation";
+import ContactDetails from "../../features/footer/components/ContactDetails/ContactDetails";
+import LegalLinks from "../../features/footer/components/LegalLinks/LegalLinks";
+import FooterNav from "../../features/nav/components/FooterNav/FooterNav";
 
 const Footer: React.FC = () => {
     return (

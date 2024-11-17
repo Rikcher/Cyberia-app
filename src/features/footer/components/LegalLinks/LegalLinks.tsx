@@ -1,4 +1,4 @@
-import StyledLegalLinks from "../styles/StyledLegalLinks";
+import StyledLegalLinks from "./StyledLegalLinks";
 
 const LegalLinks = () => {
     return (

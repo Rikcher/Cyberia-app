@@ -1,5 +1,5 @@
-import Logo from "../../../shared/components/ui/Logo/Logo";
-import StyledGeneralInformation from "../styles/StyledGeneralInformation";
+import Logo from "../../../../shared/components/ui/Logo/Logo";
+import StyledGeneralInformation from "./StyledGeneralInformation";
 
 const GeneralInformation = () => {
     return (
