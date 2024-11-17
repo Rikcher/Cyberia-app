@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import StyledBaseField from "./StyledBaseField";
 
-const StyledInputField = styled(StyledBaseField).attrs({
-    as: "input", 
-})``
-
+const StyledInputField = styled.div`
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+`
 export default StyledInputField

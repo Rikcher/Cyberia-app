@@ -10,6 +10,7 @@ function App() {
             <RouterProvider
                 router={router}
                 fallbackElement={<p>Initial Load...</p>}
+                future={{ v7_startTransition: true }}
             />
         </ThemeProvider>
     );

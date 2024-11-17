@@ -5,6 +5,7 @@ const theme = {
         accent: "#2D76F9",
         accentHover: "#124AAF",
         text: "white",
+        error: "#E92828"
     }
 }
 

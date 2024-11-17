@@ -1,8 +1,10 @@
 import { useFormContext } from "react-hook-form";
 import StyledFieldset from "./styles/StyledFieldset";
-import StyledInputField from "./styles/StyledInputField";
+import StyledInput from "./styles/StyledInput";
 import StyledLegend from "./styles/StyledLegend";
 import StyledTextArea from "./styles/StyledTextArea";
+import StyledInputField from "./styles/StyledInputField";
+import StyledInputError from "./styles/StyledInputError";
 
 interface InputFieldProps {
     label: string;
@@ -17,14 +19,28 @@ const InputField: React.FC<InputFieldProps> = ({ label, isTextArea, name }) => {
     } = useFormContext();
 
     return (
-        <StyledFieldset>
-            <StyledLegend>{label}*</StyledLegend>
-            {isTextArea ? (
-                <StyledTextArea rows={5} />
-            ) : (
-                <StyledInputField {...register(name)} />
+        <StyledInputField>
+            <StyledFieldset $hasError={!!errors[name]}>
+                <StyledLegend>{label}*</StyledLegend>
+                {isTextArea ? (
+                    <StyledTextArea
+                        rows={5}
+                        {...register(name, {
+                            required: "Please fill in this field",
+                        })}
+                    />
+                ) : (
+                    <StyledInput
+                        {...register(name, {
+                            required: "Please fill in this field",
+                        })}
+                    />
+                )}
+            </StyledFieldset>
+            {errors[name] && (
+                <StyledInputError>{`${errors[name].message}`}</StyledInputError>
             )}
-        </StyledFieldset>
+        </StyledInputField>
     );
 };
 
