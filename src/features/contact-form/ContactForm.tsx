@@ -18,7 +18,7 @@ interface ContactFormProps {
 
 const ContactForm: React.FC<ContactFormProps> = ({ marginBot }) => {
     const methods = useForm();
-    const { onSubmit } = useContactForm();
+    const { onSubmit } = useContactForm(methods);
 
     return (
         <FormWrapper $marginBot={marginBot}>
