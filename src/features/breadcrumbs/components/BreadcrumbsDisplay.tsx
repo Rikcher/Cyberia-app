@@ -1,4 +1,4 @@
-import usePageName from "../../../hooks/usePageName";
+import usePageName from "../../../shared/hooks/usePageName";
 import StyledBreadcrumbsDisplay from "./StyledBreadcrumbsDisplay";
 
 const BreadcrumbsDisplay = () => {
