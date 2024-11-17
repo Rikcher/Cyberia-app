@@ -4,6 +4,7 @@ import { pulse } from "../../../styles/animations";
 const StyledSubmitButton = styled.button.attrs({type: "submit"})<{$disabled: boolean}>`
     background-color: ${({theme}) => theme.colors.accent};
     border: none;
+    font-family: inherit;
     width: max-content;
     padding: 1.25rem 4rem;
     border-radius: 85px;

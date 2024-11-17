@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
 interface Page {
@@ -10,6 +11,7 @@ interface NavProps {
 }
 
 const Nav: React.FC<NavProps> = ({ pages }) => {
+    const { t } = useTranslation();
     return (
         <>
             {pages.map((page) => (
@@ -19,7 +21,7 @@ const Nav: React.FC<NavProps> = ({ pages }) => {
                     className="nav-link"
                     to={page.path}
                 >
-                    {page.label}
+                    {t(page.label)}
                 </Link>
             ))}
         </>

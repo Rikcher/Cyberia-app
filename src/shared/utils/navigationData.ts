@@ -1,7 +1,7 @@
 export const commonPages = [
-    { label: "Агентсво", path: "/agency" },
-    { label: "Услуги", path: "/services" },
-    { label: "Кейсы", path: "/cases" },
-    { label: "Блог", path: "/blog" },
-    { label: "Контакты", path: "/contacts" },
+    { label: "agency", path: "/agency" },
+    { label: "services", path: "/services" },
+    { label: "cases", path: "/cases" },
+    { label: "blog", path: "/blog" },
+    { label: "contacts", path: "/contacts" },
 ];
