@@ -6,7 +6,7 @@ const StyledCardHover = styled.div`
     position: absolute;
     background: rgb(204,204,204);
     background: linear-gradient(180deg, rgba(204,204,204,0) 20%, rgba(9,11,33,1) 100%);
-    color: ${({ theme }) => theme.colors.text};
+    color: white;
     display: flex;
     justify-content: center;
     align-items: end;

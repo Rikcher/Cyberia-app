@@ -1,6 +1,6 @@
 import React from "react";
-import logo from "/src/assets/Logo.svg";
 import { Link } from "react-router-dom";
+import StyledLogo from "./StyledLogo";
 
 interface LogoProps {
     width: number;
@@ -9,7 +9,7 @@ interface LogoProps {
 const Logo: React.FC<LogoProps> = ({ width }) => {
     return (
         <Link to="/">
-            <img style={{ width: `${width}rem` }} src={logo} alt="Logo" />
+            <StyledLogo $width={width}></StyledLogo>
         </Link>
     );
 };

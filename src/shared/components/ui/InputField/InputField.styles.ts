@@ -16,7 +16,7 @@ export const StyledInput = styled.input`
     width: 100%;
     height: 100%;
     padding: 0.375rem 1.25rem 1rem 1.25rem;
-    color: white;
+    color: ${({theme}) => theme.colors.text};
     font-size: inherit;
 `;
 
@@ -47,7 +47,7 @@ export const StyledTextArea = styled.textarea`
     width: 100%;
     height: 100%;
     padding: 0.375rem 1.25rem 1rem 1.25rem;
-    color: white;
+    color: ${({theme}) => theme.colors.text};
     font-size: inherit;
     resize: none;
 `;

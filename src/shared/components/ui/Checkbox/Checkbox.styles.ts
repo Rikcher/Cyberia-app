@@ -28,7 +28,7 @@ export const StyledCheck = styled.span`
     mask: url(${check});
     width: 1.5rem;
     height: 1.5rem;
-    background-color: ${({theme}) => theme.colors.text};
+    background-color: ${({theme}) => theme.colors.primary};
     mask-repeat: no-repeat;
     mask-position: center;
     pointer-events: none;

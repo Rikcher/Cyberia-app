@@ -16,8 +16,8 @@ const StyledSubmitButton = styled.button.attrs({type: "submit"})<{$disabled: boo
     cursor: ${({ $disabled }) =>
         $disabled ? "now-allowed" : "pointer"};
 
-    color: ${({ $disabled, theme }) =>
-        $disabled ? "black" : `${theme.colors.text}`};
+    color: ${({ $disabled }) =>
+        $disabled ? "black" : `white`};
 
     pointer-events: ${({ $disabled }) =>
         $disabled && "none"};
