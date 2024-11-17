@@ -1,7 +1,7 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+import { pulse } from "../../../styles/animations";
 
-const StyledSubmitButton = styled.button.attrs({type: "submit"})`
-    color: ${({theme}) => theme.colors.text};
+const StyledSubmitButton = styled.button.attrs({type: "submit"})<{$disabled: boolean}>`
     background-color: ${({theme}) => theme.colors.accent};
     border: none;
     width: max-content;
@@ -9,8 +9,19 @@ const StyledSubmitButton = styled.button.attrs({type: "submit"})`
     border-radius: 85px;
     transition: background-color 0.2s ease-in-out;
 
+    animation: ${({ $disabled }) =>
+        $disabled && css`${pulse} 1.5s infinite`};
+
+    cursor: ${({ $disabled }) =>
+        $disabled ? "now-allowed" : "pointer"};
+
+    color: ${({ $disabled, theme }) =>
+        $disabled ? "black" : `${theme.colors.text}`};
+
+    pointer-events: ${({ $disabled }) =>
+        $disabled && "none"};
+
     &:hover{
-        cursor: pointer;
         background-color: ${({theme}) => theme.colors.accentHover};
     }
 `
