@@ -1,5 +1,5 @@
-import FiltersList from "./components/FiltersList";
-import CasesList from "./components/CasesList";
+import FiltersList from "./components/FiltersList/FiltersList";
+import CasesList from "./components/CasesList/CasesList";
 
 interface CasesOverviewProps {
     marginBot: number;

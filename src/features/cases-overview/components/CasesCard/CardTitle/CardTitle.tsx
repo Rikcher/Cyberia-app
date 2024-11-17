@@ -1,5 +1,5 @@
-import StyledCardTitle from "../../styles/StyledCardTitle";
-import StyledCardTitleSvg from "../../styles/StyledCardTitleSvg";
+import StyledCardTitle from "./StyledCardTitle";
+import StyledCardTitleSvg from "./StyledCardTitleSvg";
 
 interface CardTitleProps {
     text: string;

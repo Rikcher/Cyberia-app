@@ -1,4 +1,4 @@
-import Logo from "../../../shared/components/ui/Logo";
+import Logo from "../../../shared/components/ui/Logo/Logo";
 import StyledGeneralInformation from "../styles/StyledGeneralInformation";
 
 const GeneralInformation = () => {

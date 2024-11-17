@@ -1,4 +1,4 @@
-import StyledPageHeader from "./styles/StyledPageHeader";
+import StyledPageHeader from "./PageHeader.styles";
 
 interface PageHeaderProps {
     headerText: string;

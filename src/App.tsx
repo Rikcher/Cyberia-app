@@ -2,7 +2,7 @@ import "./App.css";
 import { RouterProvider } from "react-router-dom";
 import router from "./utils/Routes";
 import { ThemeProvider } from "styled-components";
-import theme from "./styles/theme";
+import theme from "./shared/styles/theme";
 
 function App() {
     return (

@@ -1,10 +1,12 @@
 import { useFormContext } from "react-hook-form";
-import StyledFieldset from "./styles/StyledFieldset";
-import StyledInput from "./styles/StyledInput";
-import StyledLegend from "./styles/StyledLegend";
-import StyledTextArea from "./styles/StyledTextArea";
-import StyledInputField from "./styles/StyledInputField";
-import StyledInputError from "./styles/StyledInputError";
+import {
+    StyledFieldset,
+    StyledInput,
+    StyledInputError,
+    StyledInputField,
+    StyledLegend,
+    StyledTextArea,
+} from "./InputField.styles";
 
 interface InputFieldProps {
     label: string;

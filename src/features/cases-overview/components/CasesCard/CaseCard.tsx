@@ -1,6 +1,6 @@
-import StyledCaseCard from "../styles/StyledCaseCard";
-import CardTitle from "./ui/CardTitle";
-import StyledCardHover from "../styles/StyledCardHover";
+import StyledCaseCard from "./StyledCaseCard";
+import CardTitle from "./CardTitle/CardTitle";
+import StyledCardHover from "./StyledCardHover";
 
 interface CaseCardProps {
     bgImgUrl: string;

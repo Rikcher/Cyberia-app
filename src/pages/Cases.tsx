@@ -1,4 +1,4 @@
-import PageHeader from "../shared/components/ui/PageHeader";
+import PageHeader from "../shared/components/ui/PageHeader/PageHeader";
 import usePageName from "../hooks/usePageName";
 import CasesOverview from "../features/cases-overview/CasesOverview";
 import ContactForm from "../features/contact-form/ContactForm";

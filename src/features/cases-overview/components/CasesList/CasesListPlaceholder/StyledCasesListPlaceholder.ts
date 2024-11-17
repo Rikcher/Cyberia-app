@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { pulse } from "../../../shared/styles/animations";
+import { pulse } from "../../../../../shared/styles/animations"; 
 
 const StyledCasesListPlaceholder = styled.div`
     width: 24.1875rem;

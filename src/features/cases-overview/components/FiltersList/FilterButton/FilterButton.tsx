@@ -1,5 +1,5 @@
-import useFilterStore from "../../services/store";
-import StyledFilterButton from "../../styles/StyledFilterButton";
+import useFilterStore from "../../../services/store";
+import StyledFilterButton from "./StyledFilterButton";
 
 interface FilterButtonProp {
     id: number | string;

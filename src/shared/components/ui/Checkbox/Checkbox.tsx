@@ -1,7 +1,9 @@
-import StyledCheckbox from "./styles/StyledCheckbox";
-import StyledBox from "./styles/StyledBox";
-import StyledCheck from "./styles/StyledCheck";
-import StyledLabel from "./styles/StyledLabel";
+import {
+    StyledCheckbox,
+    StyledBox,
+    StyledCheck,
+    StyledLabel,
+} from "./Checkbox.styles";
 import { useState } from "react";
 
 interface CheckboxProps {

@@ -1,5 +1,5 @@
-import StyledFiltersListPlaceholder from "../../styles/StyledFiltersListPlaceholder";
-import StyledFiltersList from "../../styles/StyledFiltersList";
+import StyledFiltersListPlaceholder from "./StyledFiltersListPlaceholder";
+import StyledFiltersList from "../StyledFiltersList";
 
 interface FiltersListPlaceholderProps {
     length: number;

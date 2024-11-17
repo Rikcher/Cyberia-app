@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { pulse } from "../../../shared/styles/animations";
+import { pulse } from "../../../../../shared/styles/animations"; 
 
 const StyledFiltersListPlaceholder = styled.div`
     width: 15.625rem;
