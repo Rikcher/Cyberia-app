@@ -2,10 +2,12 @@ import "./App.css";
 import { RouterProvider } from "react-router-dom";
 import router from "./utils/Routes";
 import { ThemeProvider } from "styled-components";
-import theme from "./shared/styles/theme";
 import { Toaster } from "sonner";
+import { useThemeStore } from "./features/theme-switch/services/store";
 
 function App() {
+    const { theme } = useThemeStore();
+
     return (
         <ThemeProvider theme={theme}>
             <RouterProvider

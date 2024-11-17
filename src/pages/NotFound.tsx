@@ -1,5 +1,9 @@
+import { useTranslation } from "react-i18next";
+
 const NotFound = () => {
-    return <h1>NOT FOUND PAGE</h1>;
+    const { t } = useTranslation();
+
+    return <h1 style={{ color: "white" }}>{t("not_found")}</h1>;
 };
 
 export default NotFound;

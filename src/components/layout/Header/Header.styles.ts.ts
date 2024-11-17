@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const StyledHeader = styled.header`
+export const StyledHeader = styled.header`
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -9,4 +9,7 @@ const StyledHeader = styled.header`
     max-width: 77.5rem;
 `;
 
-export default StyledHeader;
+export const SwitchersWrapper = styled.div`
+    display: flex;
+    gap: 4rem;
+`
