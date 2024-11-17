@@ -7,6 +7,7 @@ import {
     StyledLegend,
     StyledTextArea,
 } from "./InputField.styles";
+import { useTranslation } from "react-i18next";
 
 interface InputFieldProps {
     label: string;
@@ -25,6 +26,7 @@ const InputField: React.FC<InputFieldProps> = ({
         register,
         formState: { errors },
     } = useFormContext();
+    const { t } = useTranslation();
 
     return (
         <StyledInputField>
@@ -34,14 +36,14 @@ const InputField: React.FC<InputFieldProps> = ({
                     <StyledTextArea
                         rows={5}
                         {...register(name, {
-                            required: "Please fill in this field",
+                            required: t("empty_input"),
                             ...validationRule,
                         })}
                     />
                 ) : (
                     <StyledInput
                         {...register(name, {
-                            required: "Please fill in this field",
+                            required: t("empty_input"),
                             ...validationRule,
                         })}
                     />

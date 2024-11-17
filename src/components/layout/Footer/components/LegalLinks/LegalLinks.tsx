@@ -1,19 +1,22 @@
+import { useTranslation } from "react-i18next";
 import StyledLegalLinks from "./StyledLegalLinks";
 
 const LegalLinks = () => {
+    const { t } = useTranslation();
+
     return (
         <StyledLegalLinks>
             <a href="#">
-                2021, digital-агентство Cyberia <br />
+                {t("footer_p")} <br />
             </a>
             <a href="#">
-                Положение о защите персональных данных <br />
+                {t("footer_link_1")} <br />
             </a>
             <a href="#">
-                Политика в отношении обработки и защиты персональных данных{" "}
+                {t("footer_link_2")}
                 <br />
             </a>
-            <a href="#">Оферта оказания услуг</a>
+            <a href="#">{t("footer_link_3")}</a>
         </StyledLegalLinks>
     );
 };

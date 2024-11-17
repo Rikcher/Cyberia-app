@@ -11,6 +11,7 @@ import {
     FormRow,
     SubmitWrapper,
 } from "./styles/ContactForm.styles";
+import { useTranslation } from "react-i18next";
 
 interface ContactFormProps {
     marginBot: number;
@@ -19,23 +20,25 @@ interface ContactFormProps {
 const ContactForm: React.FC<ContactFormProps> = ({ marginBot }) => {
     const methods = useForm();
     const { onSubmit } = useContactForm(methods);
+    const { t } = useTranslation();
 
     return (
         <FormWrapper $marginBot={marginBot}>
             <FormProvider {...methods}>
                 <Form onSubmit={methods.handleSubmit(onSubmit)}>
                     <FormRow>
-                        <InputField label="Ваше Имя" name="name" />
+                        <InputField label={t("name")} name="name" />
                         <ContactFormEmailField />
                         <ContactFormPhoneField />
                     </FormRow>
-                    <InputField label="Сообщение" name="message" isTextArea />
-                    <Checkbox
-                        uid="terms-checkbox"
-                        label="Согласие на обработку персональных данных"
+                    <InputField
+                        label={t("message")}
+                        name="message"
+                        isTextArea
                     />
+                    <Checkbox uid="terms-checkbox" label={t("consent")} />
                     <SubmitWrapper>
-                        <SubmitButton label="Обсудить проект" />
+                        <SubmitButton label={t("submit")} />
                     </SubmitWrapper>
                 </Form>
             </FormProvider>

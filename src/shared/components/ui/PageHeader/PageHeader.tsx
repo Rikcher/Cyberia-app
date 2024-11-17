@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import StyledPageHeader from "./PageHeader.styles";
 
 interface PageHeaderProps {
@@ -6,8 +7,12 @@ interface PageHeaderProps {
 }
 
 const PageHeader: React.FC<PageHeaderProps> = ({ headerText, marginBot }) => {
+    const { t } = useTranslation();
+
     return (
-        <StyledPageHeader $marginBot={marginBot}>{headerText}</StyledPageHeader>
+        <StyledPageHeader $marginBot={marginBot}>
+            {t(headerText)}
+        </StyledPageHeader>
     );
 };
 
