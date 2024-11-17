@@ -1,6 +1,6 @@
-import StyledHeader from "./styles/StyledHeader";
-import Logo from "../../shared/components/ui/Logo/Logo";
-import HeaderNav from "../../features/nav/components/HeaderNav/HeaderNav";
+import StyledHeader from "./StyledHeader";
+import Logo from "../../../shared/components/ui/Logo/Logo";
+import HeaderNav from "../../../features/nav/components/HeaderNav/HeaderNav";
 
 const Header: React.FC = () => {
     return (
