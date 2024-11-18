@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import { darkTheme, lightTheme } from "../../../shared/styles/theme"; 
+import { darkTheme, lightTheme } from "../../../styles/theme"; 
 
 interface ThemeState {
     theme: typeof darkTheme;

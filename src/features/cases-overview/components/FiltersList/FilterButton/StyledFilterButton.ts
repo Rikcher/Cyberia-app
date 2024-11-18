@@ -9,9 +9,13 @@ const StyledFilterButton = styled.button`
     border-radius: 7px;
     background-color: ${({theme}) => theme.colors.primary};
     cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s ease-in-out;
 
-    &:not(.active):hover {
-        color: ${({ theme }) => theme.colors.accent};
+    p {
+        position: relative;
+        z-index: 3;
     }
 
     &.active {
