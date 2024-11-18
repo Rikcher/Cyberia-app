@@ -1,12 +1,14 @@
 import styled from "styled-components";
 
-export const StyledServicesHeader = styled.div`
+export const StyledServicesHeader = styled.div<{$isFaded: boolean}>`
     color: ${({ theme }) => theme.colors.text};
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 3rem;
+    opacity: ${({ $isFaded }) => ($isFaded ? "0" : "1")};
+    transition: opacity 0.7s ease-in-out; 
 
     p {
         font-size: 3rem;

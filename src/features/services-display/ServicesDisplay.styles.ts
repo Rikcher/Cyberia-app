@@ -18,7 +18,7 @@ export const StyledCanvas = styled.canvas<{$isHovered: boolean}>`
         $isHovered ? "pointer !important" : "default"};
 `
 
-export const StyledCircleTextWrapper = styled.div<{$isFaded: boolean}>`
+export const StyledCircleTextWrapper = styled.div`
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -27,10 +27,9 @@ export const StyledCircleTextWrapper = styled.div<{$isFaded: boolean}>`
     justify-content: space-between;
     align-items: center;
     pointer-events: none;
-    opacity: ${({ $isFaded }) => ($isFaded ? "0" : "1")};
-    transition: opacity 0.7s ease-in-out; 
+    position: relative;
 `
-export const StyledCircleText = styled.div`
+export const StyledCircleText = styled.div<{$isFaded: boolean}>`
     width: 31.25rem;
     height: 31.25rem;
     mask: url(${CircleTextSvg});
@@ -40,4 +39,6 @@ export const StyledCircleText = styled.div`
     background-color: ${({theme}) => theme.colors.text};
     transform: translateY(50%);
     animation: ${rotate} 40s linear infinite;
+    opacity: ${({ $isFaded }) => ($isFaded ? "0" : "1")};
+    transition: opacity 0.7s ease-in-out; 
 `

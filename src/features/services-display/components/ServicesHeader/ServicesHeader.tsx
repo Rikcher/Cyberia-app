@@ -1,9 +1,13 @@
-import { StyledServicesHeader } from "./ServicesHEader.styles";
-import SvgLogo from "../../../shared/components/ui/SvgLogo/SvgLogo";
+import { StyledServicesHeader } from "./ServicesHeader.styles";
+import SvgLogo from "../../../../shared/components/ui/SvgLogo/SvgLogo";
 
-const ServicesHeader = () => {
+interface ServicesHeaderProps {
+    isFaded: boolean;
+}
+
+const ServicesHeader: React.FC<ServicesHeaderProps> = ({ isFaded }) => {
     return (
-        <StyledServicesHeader>
+        <StyledServicesHeader $isFaded={isFaded}>
             <SvgLogo width={300} height={60} />
             <p>
                 Развиваем digital-среду, создавая{" "}

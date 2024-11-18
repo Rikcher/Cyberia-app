@@ -7,7 +7,8 @@ import {
 } from "./ServicesDisplay.styles";
 import useSplineLoader from "./hooks/useSplineLoader";
 import useCanvasPositionUpdater from "./hooks/useCanvasPositionUpdater";
-import ServicesHeader from "./components/ServicesHeader";
+import ServicesHeader from "./components/ServicesHeader/ServicesHeader";
+import SelectedService from "./components/SelectedService/SelectedService";
 
 const PlanetObject = () => {
     const canvasRef = useRef<HTMLCanvasElement | null>(null);
@@ -20,14 +21,7 @@ const PlanetObject = () => {
     useCanvasPositionUpdater(wrapperRef, setCanvasTopPosition);
 
     useEffect(() => {
-        if (hoveredArea) {
-            console.log("Area hovered: ", hoveredArea);
-        }
-    }, [hoveredArea]);
-
-    useEffect(() => {
         if (selectedArea) {
-            console.log("Area Selected: ", selectedArea);
             if (selectedArea === "Trigger_to_zoom_in") {
                 setIsFaded(true);
             }
@@ -41,9 +35,13 @@ const PlanetObject = () => {
 
     return (
         <CanvasWrapper ref={wrapperRef}>
-            <StyledCircleTextWrapper $isFaded={isFaded}>
-                <ServicesHeader></ServicesHeader>
-                <StyledCircleText />
+            <StyledCircleTextWrapper>
+                <ServicesHeader isFaded={isFaded} />
+                <StyledCircleText $isFaded={isFaded} />
+                <SelectedService
+                    isFaded={isFaded}
+                    selectedArea={selectedArea}
+                />
             </StyledCircleTextWrapper>
             <StyledCanvas
                 ref={canvasRef}
