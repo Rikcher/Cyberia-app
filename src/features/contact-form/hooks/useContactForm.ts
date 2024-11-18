@@ -11,7 +11,7 @@ export const useContactForm = (methods: UseFormReturn<FieldValues, any, undefine
         try {
             await mutateAsync(data);
             showSuccess('Feedback sent successfully');
-            methods.reset()
+            // methods.reset()
         } catch (error: unknown) {
             if( error instanceof AxiosError) {
                 const errorData = error.response?.data?.errors;

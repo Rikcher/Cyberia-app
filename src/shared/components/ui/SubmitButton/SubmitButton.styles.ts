@@ -17,6 +17,13 @@ export const StyledSubmitButton = styled.button.attrs({type: "submit"})<{$disabl
     padding: 1.25rem 4rem;
     border-radius: 85px;
     transition: background-color 0.2s ease-in-out;
+    ${DoubleCircleHover}
+    
+    &:hover {
+        ${StyledLabel} {
+            scale: 1.3;
+        }
+    }
 
     animation: ${({ $disabled }) =>
         $disabled && css`${pulse} 1.5s infinite`};
@@ -30,11 +37,12 @@ export const StyledSubmitButton = styled.button.attrs({type: "submit"})<{$disabl
     pointer-events: ${({ $disabled }) =>
         $disabled && "none"};
 
-    ${DoubleCircleHover}
-
-    &:hover {
-        ${StyledLabel} {
-            scale: 1.3;
-        }
+    &:before, &:after {
+        ${({ $disabled }) =>
+        $disabled && 
+            css`
+                width: 0;
+                height: 0;
+        `};
     }
 `
