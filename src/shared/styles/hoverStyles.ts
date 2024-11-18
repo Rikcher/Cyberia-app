@@ -21,7 +21,7 @@ export const DoubleCircleHover = css`
     }
 
     &:after {
-        background: linear-gradient(to right, #F92D76, #FF8E53);
+        background: linear-gradient(to right, ${({theme}) => theme.colors.accentSecondary}, #FF8E53);
         transition: 0.8s ease;
         transition-delay: .3s;
     }
