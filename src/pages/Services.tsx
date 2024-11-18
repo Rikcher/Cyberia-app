@@ -1,5 +1,7 @@
+import ServicesDisplay from "../features/services-display/ServicesDisplay";
+
 const Services = () => {
-    return <h1>SERVICES PAGE</h1>;
+    return <ServicesDisplay></ServicesDisplay>;
 };
 
 export default Services;
