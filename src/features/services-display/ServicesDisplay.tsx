@@ -29,11 +29,6 @@ const PlanetObject = () => {
         }
     }, [selectedArea]);
 
-    //!! REMOVE LATER
-    useEffect(() => {
-        setIsFaded(false);
-    }, [canvasRef]);
-
     return (
         <CanvasWrapper ref={wrapperRef}>
             <StyledCircleTextWrapper>

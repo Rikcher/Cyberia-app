@@ -8,7 +8,8 @@ const BreadcrumbsDisplay = () => {
 
     return (
         <StyledBreadcrumbsDisplay>
-            Главная / <span className="breadcrumb-current">{t(pageName)}</span>
+            {t("home")} /{" "}
+            <span className="breadcrumb-current">{t(pageName)}</span>
         </StyledBreadcrumbsDisplay>
     );
 };
