@@ -19,7 +19,7 @@ const useScrambleEffect = (ref: React.RefObject<HTMLElement>, text: string, dura
 
             ref.current.innerText = targetText
                 .split("")
-                .map((char, index) => {
+                .map((_, index) => {
                     if (index < iteration) {
                         return targetText[index]; 
                     }

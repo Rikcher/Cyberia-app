@@ -9,6 +9,7 @@ import useSplineLoader from "./hooks/useSplineLoader";
 import useCanvasPositionUpdater from "./hooks/useCanvasPositionUpdater";
 import ServicesHeader from "./components/ServicesHeader/ServicesHeader";
 import SelectedService from "./components/SelectedService/SelectedService";
+import HoveredService from "./components/HoveredService/HoveredService";
 
 const PlanetObject = () => {
     const canvasRef = useRef<HTMLCanvasElement | null>(null);
@@ -42,13 +43,15 @@ const PlanetObject = () => {
                     isFaded={isFaded}
                     selectedArea={selectedArea}
                 />
+                <HoveredService
+                    isHovered={!!hoveredArea}
+                    hoveredArea={hoveredArea}
+                />
             </StyledCircleTextWrapper>
             <StyledCanvas
                 ref={canvasRef}
                 id="canvas3d"
-                $isHovered={
-                    hoveredArea && hoveredArea !== "Not Hovered" ? true : false
-                }
+                $isHovered={!!hoveredArea}
                 style={{
                     top: `${canvasTopPosition}px`,
                 }}

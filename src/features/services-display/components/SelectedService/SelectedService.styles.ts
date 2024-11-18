@@ -48,14 +48,14 @@ export const InformationWrapper = styled.div`
     overflow: hidden;
 
     h2 {
-        font-size: 30px;
+        font-size: 1.875rem;
         font-weight: 600;
         color: ${({theme}) => theme.colors.accent};
-        margin-bottom: 40px;
+        margin-bottom: 2.5rem;
     }
 
     p {
-        line-height: 30px;
+        line-height: 1.875rem;
         color: ${({theme}) => theme.colors.primary};
     }
 `

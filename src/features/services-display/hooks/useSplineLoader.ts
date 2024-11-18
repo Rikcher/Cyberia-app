@@ -22,7 +22,7 @@ const useSplineLoader = (canvasRef: React.RefObject<HTMLCanvasElement>) => {
                         if (e.target.name.startsWith("hover_")) {
                             setHoveredArea(e.target.name); 
                         } else {
-                            setHoveredArea("Not Hovered"); 
+                            setHoveredArea(null); 
                         }
                     });
 
