@@ -25,10 +25,11 @@ export const StyledHoveredService = styled.div<{$isHovered: boolean, $maxWidth: 
 `
 export const StyledHoveredServiceWrapper = styled.div`
     font-size: 0.875rem;
-    background-color: white;
+    background-color: ${({theme}) => theme.colors.text};
     border-radius: 6px;
     margin: 0 0 0.9375rem 0.9375rem;
     padding: 0.625rem 0.9375rem;
+    color: ${({theme}) => theme.colors.primary};
 
     p {
         text-wrap: nowrap;

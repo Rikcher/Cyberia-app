@@ -28,7 +28,7 @@ const HoveredService: React.FC<HoveredServiceProps> = ({
 
     return (
         <StyledHoveredService $isHovered={isHovered} $maxWidth={textWidth}>
-            <div className="svg"></div>
+            <div className="svg" draggable={false}></div>
             <StyledHoveredServiceWrapper>
                 <p>{displayedTitle}</p>
                 <span

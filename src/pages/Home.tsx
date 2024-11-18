@@ -1,5 +1,7 @@
+import EmptyPage from "../shared/components/EmptyPage/EmptyPage";
+
 const Home = () => {
-    return <h1>HOME PAGE / LANDING PAGE</h1>;
+    return <EmptyPage></EmptyPage>;
 };
 
 export default Home;

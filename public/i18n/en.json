@@ -22,5 +22,6 @@
     "err_email": "Please enter a valid email",
     "err_phone": "Please enter a valid phone number",
     "empty_input": "Please fill inthis field",
-    "not_found": "The page you're attempting to access does not exist."
+    "not_found": "The page you're attempting to access does not exist.",
+    "empty_page_text": "There is nothing here, unfortunately, but there is a lot of interesting stuff waiting for you on the services page!"
 }
