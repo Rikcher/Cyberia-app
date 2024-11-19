@@ -33,4 +33,11 @@ export const StyledFilterButton = styled.button`
     &.active {
         background-color: ${({ theme }) => theme.colors.accent};
     }
+
+    @media (max-width: 768px) {
+        padding: 0.25rem 0.5;
+        p {
+            font-size: 0.75rem;
+        }
+    }
 `
