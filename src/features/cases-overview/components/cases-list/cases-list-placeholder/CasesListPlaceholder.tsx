@@ -1,5 +1,5 @@
-import StyledCasesListPlaceholder from "./StyledCasesListPlaceholder";
-import StyledCasesList from "../StyledCasesList";
+import { StyledCasesListPlaceholder } from "./CasesListPlaceholder.styles";
+import { StyledCasesList } from "../CasesList.styles";
 
 interface CasesListPlaceholderProps {
     length: number;

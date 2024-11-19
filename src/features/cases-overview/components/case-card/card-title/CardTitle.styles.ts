@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import cardTitleSvg from "/src/assets/cardTitleSvg.svg";
 
-const StyledCardTitle = styled.h3`
+export const StyledCardTitle = styled.h3`
     width: 8rem;
     height: 8rem;
     border-radius: 5px;
@@ -16,4 +17,14 @@ const StyledCardTitle = styled.h3`
     font-weight: 600;
     text-align: center;
 `
-export default StyledCardTitle
+
+export const StyledCardTitleSvg = styled.div`
+    width: 1.5625rem;
+    height: 1.5625rem;
+    mask: url(${cardTitleSvg});
+    background-color: ${({theme}) => theme.colors.accent};
+    position: absolute;
+    top: -0.375rem;
+    right: -0.375rem;
+`
+

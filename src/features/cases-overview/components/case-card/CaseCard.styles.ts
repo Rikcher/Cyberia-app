@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const StyledCardHover = styled.div`
+export const StyledCardHover = styled.div`
     width: 100%;
     height: 100%;
     position: absolute;
@@ -19,4 +19,20 @@ const StyledCardHover = styled.div`
         cursor: pointer;
     }
 `
-export default StyledCardHover
+export const StyledCaseCard = styled.div<{$bgImgUrl: string}>`
+    background: center / cover no-repeat url(${({$bgImgUrl}) => $bgImgUrl});
+    width: 24.1875rem;
+    height: 23.625rem;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+`
+
+export const StyledDescription = styled.p`
+overflow: hidden;
+
+.letter {
+    display: inline-block;
+    line-height: 1em;
+}
+`

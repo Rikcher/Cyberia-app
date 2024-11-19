@@ -1,16 +1,13 @@
-import FiltersList from "./components/FiltersList/FiltersList";
-import CasesList from "./components/CasesList/CasesList";
+import FiltersList from "./components/filters-list/FiltersList";
+import CasesList from "./components/cases-list/CasesList";
+import { StyledCasesOverview } from "./CasesOverview.styles";
 
-interface CasesOverviewProps {
-    marginBot: number;
-}
-
-const CasesOverview: React.FC<CasesOverviewProps> = ({ marginBot }) => {
+const CasesOverview: React.FC = () => {
     return (
-        <div style={{ marginBottom: `${marginBot}rem` }}>
+        <StyledCasesOverview>
             <FiltersList />
             <CasesList />
-        </div>
+        </StyledCasesOverview>
     );
 };
 

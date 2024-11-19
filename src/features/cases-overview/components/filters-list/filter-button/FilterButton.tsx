@@ -1,7 +1,6 @@
 import useFilterStore from "../../../services/store";
-import StyledFilterButton from "./StyledFilterButton";
-import StyledCircle from "./StyledCircle";
-import { useHoverWithCircle } from "../../../hooks/useHoverWithCircle";
+import { StyledFilterButton, StyledCircle } from "./FilterButton.styles";
+import { useHoverWithCircle } from "../../../../../shared/hooks/useHoverWithCircle";
 
 interface FilterButtonProp {
     id: number | string;

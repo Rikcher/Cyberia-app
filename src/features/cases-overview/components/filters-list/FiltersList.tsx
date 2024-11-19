@@ -1,9 +1,9 @@
 import { useFilters } from "../../hooks/useFilters";
-import FilterButton from "./FilterButton/FilterButton";
+import FilterButton from "./filter-button/FilterButton";
 import { Filter } from "../../types";
-import StyledFiltersList from "./StyledFiltersList";
+import { StyledFiltersList } from "./FiltersList.styles";
 import useFilterStore from "../../services/store";
-import FiltersListPlaceholder from "./FilterListPlaceholder/FiltersListPlaceholder";
+import FiltersListPlaceholder from "./filters-list-placeholder/FiltersListPlaceholder";
 
 const FiltersList = () => {
     const { data, isError, isLoading } = useFilters();

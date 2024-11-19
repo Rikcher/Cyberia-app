@@ -1,11 +1,11 @@
 import { useProjects } from "../../hooks/useProjects";
 import { Project } from "../../types";
-import CaseCard from "../CasesCard/CaseCard";
-import StyledCasesList from "./StyledCasesList";
+import CaseCard from "../case-card/CaseCard";
+import { StyledCasesList } from "./CasesList.styles";
 import { caseDescription } from "../../../../shared/utils/casesData"; // Instead of project.description
 import { filterProjects } from "../../utils/filterProjects";
 import useFilterStore from "../../services/store";
-import CasesListPlaceholder from "./CasesListPlaceholder/CasesListPlaceholder";
+import CasesListPlaceholder from "./cases-list-placeholder/CasesListPlaceholder";
 
 const CasesList = () => {
     const { data, isError, isLoading } = useProjects();

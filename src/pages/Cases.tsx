@@ -11,7 +11,7 @@ const Cases: React.FC = () => {
     return (
         <>
             <PageHeader headerText={pageName} marginBot={4} />
-            <CasesOverview marginBot={6.25} />
+            <CasesOverview />
             <PageHeader
                 headerText={t("feedback_form_title")}
                 marginBot={4.875}

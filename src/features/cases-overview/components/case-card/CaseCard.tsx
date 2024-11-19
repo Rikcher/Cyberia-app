@@ -1,10 +1,11 @@
-// src/components/CaseCard/CaseCard.tsx
 import { useRef, useEffect } from "react";
-import StyledCaseCard from "./StyledCaseCard";
-import CardTitle from "./CardTitle/CardTitle";
-import StyledCardHover from "./StyledCardHover";
-import StyledDescription from "./StyledDescription";
+import {
+    StyledCaseCard,
+    StyledCardHover,
+    StyledDescription,
+} from "./CaseCard.styles";
 import useTextAnimation from "../../../../shared/hooks/useTextAnimation";
+import CardTitle from "./card-title/CardTitle";
 
 interface CaseCardProps {
     bgImgUrl: string;
