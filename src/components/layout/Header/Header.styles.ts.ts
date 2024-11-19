@@ -1,12 +1,21 @@
 import styled from "styled-components";
 
-export const StyledHeader = styled.header`
+export const StyledDesktopHeader = styled.header`
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 4rem 1.5rem;
     max-width: 77.5rem;
+`;
+export const StyledMobileHeader = styled.header`
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.625rem 1.5rem;
+    position: relative;
+    background-color: ${({theme}) => theme.colors.primaryDarkerShade};
 `;
 
 export const SwitchersWrapper = styled.div`

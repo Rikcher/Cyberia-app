@@ -1,6 +1,6 @@
 import { StyledFooterNav } from "./FooterNav.styles";
-import { commonPages } from "../../../shared/utils/navigationData";
-import Nav from "../../../shared/components/nav/Nav";
+import { commonPages } from "../../shared/utils/navigationData";
+import Nav from "../../shared/components/nav/Nav";
 
 const FooterNav = () => {
     return (

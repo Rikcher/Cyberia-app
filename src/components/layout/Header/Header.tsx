@@ -1,22 +1,11 @@
-import { StyledHeader, SwitchersWrapper } from "./Header.styles.ts";
-import {
-    Logo,
-    HeaderNav,
-    LanguageSwitch,
-    ThemeSwitch,
-} from "./Header.components";
+import MobileHeader from "./MobileHeader";
+import DesktopHeader from "./DesktopHeader";
+import { useWindowSizeStore } from "../../../store/useWindowSizeStore.ts";
 
-const Header: React.FC = () => {
-    return (
-        <StyledHeader>
-            <Logo width={8.125} />
-            <HeaderNav />
-            <SwitchersWrapper>
-                <ThemeSwitch />
-                <LanguageSwitch />
-            </SwitchersWrapper>
-        </StyledHeader>
-    );
+const Header = () => {
+    const { width } = useWindowSizeStore();
+
+    return <>{width < 768 ? <MobileHeader /> : <DesktopHeader />}</>;
 };
 
 export default Header;
