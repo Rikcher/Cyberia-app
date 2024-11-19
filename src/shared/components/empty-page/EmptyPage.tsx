@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import StyledEmptyPage from "./StyledEmptyPage";
+import { StyledEmptyPage } from "./EmptyPage.styles";
 
 const EmptyPage = () => {
     const { t } = useTranslation();

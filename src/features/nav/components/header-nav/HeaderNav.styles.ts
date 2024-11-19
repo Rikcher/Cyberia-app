@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
-const StyledHeaderNav = styled.div`
+export const StyledHeaderNav = styled.ul`
+    list-style-type: none;
     display: flex;
     gap: 3.75rem;
 
@@ -34,4 +35,3 @@ const StyledHeaderNav = styled.div`
     }
 `;
 
-export default StyledHeaderNav;

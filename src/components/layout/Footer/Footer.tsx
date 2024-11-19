@@ -1,20 +1,27 @@
 import React from "react";
-import StyledFooter from "./StyledFooter";
-import GeneralInformation from "./components/GeneralInformation/GeneralInformation";
-import ContactDetails from "./components/ContactDetails/ContactDetails";
-import LegalLinks from "./components/LegalLinks/LegalLinks";
-import FooterNav from "../../../features/nav/components/FooterNav/FooterNav";
+import {
+    StyledFooter,
+    StyledFooterContactDetails,
+    StyledFooterGeneralInformation,
+    StyledFooterLegalLinks,
+} from "./Footer.styles";
+import { FooterNav, Logo } from "./Footer.components";
+import { useTranslation } from "react-i18next";
 
 const Footer: React.FC = () => {
+    const { t } = useTranslation();
     return (
         <StyledFooter>
             <div className="inner-container">
-                <GeneralInformation />
+                <StyledFooterGeneralInformation>
+                    <Logo width={12.25} />
+                    <p>{t("footer_title")}</p>
+                </StyledFooterGeneralInformation>
                 <div className="center-part">
-                    <ContactDetails />
+                    <StyledFooterContactDetails />
                     <FooterNav />
                 </div>
-                <LegalLinks />
+                <StyledFooterLegalLinks />
             </div>
         </StyledFooter>
     );

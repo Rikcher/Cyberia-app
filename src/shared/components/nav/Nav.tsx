@@ -15,14 +15,16 @@ const Nav: React.FC<NavProps> = ({ pages }) => {
     return (
         <>
             {pages.map((page) => (
-                <Link
-                    key={`${page.label}-page`}
-                    aria-label={page.label}
-                    className="nav-link"
-                    to={page.path}
-                >
-                    {t(page.label)}
-                </Link>
+                <li>
+                    <Link
+                        key={`${page.label}-page`}
+                        aria-label={page.label}
+                        className="nav-link"
+                        to={page.path}
+                    >
+                        {t(page.label)}
+                    </Link>
+                </li>
             ))}
         </>
     );

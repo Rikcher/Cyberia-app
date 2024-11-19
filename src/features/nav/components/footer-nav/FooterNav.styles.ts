@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
-const StyledFooterNav = styled.div`
+export const StyledFooterNav = styled.ul`
+    list-style-type: none;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -17,4 +18,3 @@ const StyledFooterNav = styled.div`
     }
 `
 
-export default StyledFooterNav
