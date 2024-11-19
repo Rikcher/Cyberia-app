@@ -1,11 +1,12 @@
 import { FieldValues, UseFormReturn } from "react-hook-form";
 import { useSendFeedback } from "./useSendFeedback"; 
-import { showErrorMessages, showError, showSuccess } from "../../../shared/utils/toastUtils";
-import { AxiosError } from "axios"; 
+import { showSuccess } from "../../../shared/utils/toastUtils";
+import { useHandleError } from "../../../shared/hooks/useHandleError"; 
 
 
 export const useContactForm = (methods: UseFormReturn<FieldValues, any, undefined>) => {
     const { mutateAsync } = useSendFeedback();
+    const { handleError } = useHandleError();  
 
     const onSubmit = async (data: FieldValues) => {
         try {
@@ -13,17 +14,7 @@ export const useContactForm = (methods: UseFormReturn<FieldValues, any, undefine
             showSuccess('Feedback sent successfully');
             methods.reset()
         } catch (error: unknown) {
-            if( error instanceof AxiosError) {
-                const errorData = error.response?.data?.errors;
-    
-                if (errorData) {
-                    showErrorMessages(errorData);
-                } else {
-                    showError('Something went wrong'); 
-                }
-            } else {
-                showError('An unexpected error occurred');
-            }
+            handleError(error)
         }
     };
 

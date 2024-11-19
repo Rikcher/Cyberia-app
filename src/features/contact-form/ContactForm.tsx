@@ -3,14 +3,14 @@ import InputField from "../../shared/components/ui/InputField/InputField";
 import Checkbox from "../../shared/components/ui/Checkbox/Checkbox";
 import SubmitButton from "../../shared/components/ui/SubmitButton/SubmitButton";
 import { useContactForm } from "./hooks/useContactForm";
-import ContactFormEmailField from "./components/ui/ContactFormEmailField";
-import ContactFormPhoneField from "./components/ui/ContactFormPhoneField";
+import ContactFormEmailField from "./components/ContactFormEmailField";
+import ContactFormPhoneField from "./components/ContactFormPhoneField";
 import {
     FormWrapper,
     Form,
     FormRow,
     SubmitWrapper,
-} from "./styles/ContactForm.styles";
+} from "./ContactForm.styles";
 import { useTranslation } from "react-i18next";
 
 interface ContactFormProps {
