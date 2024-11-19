@@ -20,8 +20,8 @@ export const lightTheme = {
     colors: {
         background: "linear-gradient(to bottom, #f0f0f0 0%, #ffffff 100%)",
         primary: "#F0F0F0",
-        primaryShade: "#24252F",
-        primaryDarkerShade: "#20212C",
+        primaryShade: "#C9C9C9",
+        primaryDarkerShade: "#AEAEAE",
         accent: "#F92D76",
         accentSecondary: "#2D76F9",
         text: "#333333",
