@@ -42,7 +42,9 @@ const ContactForm: React.FC<ContactFormProps> = ({ marginBot }) => {
                         <Checkbox uid="terms-checkbox" label={t("consent")} />
                     )}
                     <SubmitWrapper>
-                        <SubmitButton label={t("submit")} />
+                        <SubmitButton
+                            label={width > 1280 ? t("submit") : t("send")}
+                        />
                     </SubmitWrapper>
                     {width <= 768 && <p>{t("consent_mobile")}</p>}
                 </Form>
