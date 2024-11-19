@@ -5,7 +5,7 @@ import { useWindowSizeStore } from "../../../store/useWindowSizeStore";
 const Header = () => {
     const { width } = useWindowSizeStore();
 
-    return <>{width < 768 ? <MobileHeader /> : <DesktopHeader />}</>;
+    return <>{width < 1024 ? <MobileHeader /> : <DesktopHeader />}</>;
 };
 
 export default Header;

@@ -47,7 +47,7 @@ const CaseCard: React.FC<CaseCardProps> = ({
             <StyledCardHover ref={width > 768 ? cardRef : null}>
                 {width <= 768 && <CardTitle text={title} />}
                 <StyledDescription ref={textWrapperRef}>
-                    <p>{description}</p>
+                    {description}
                 </StyledDescription>
             </StyledCardHover>
         </StyledCaseCard>

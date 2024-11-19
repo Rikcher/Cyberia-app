@@ -20,6 +20,7 @@ export const StyledInput = styled.input`
     font-size: inherit;
     &::placeholder {
         opacity: 0;
+        font-family: inherit;
     }
 
     @media (max-width: 768px) {
@@ -67,6 +68,7 @@ export const StyledTextArea = styled.textarea`
     resize: none;
     &::placeholder {
         opacity: 0;
+        font-family: inherit;
     }
 
     @media (max-width: 768px) {

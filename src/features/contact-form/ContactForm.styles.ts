@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const FormWrapper = styled.div<{ $marginBot: number }>`
     margin-bottom: ${({ $marginBot }) => `${$marginBot}rem`};
 
-    @media (max-width: 768px) {
+    @media (max-width: 1280px) {
         background-color: ${({theme}) => theme.colors.primaryShade};
         padding: 0 1.5rem 2.25rem 1.5rem;
         margin-bottom: 0;
@@ -15,7 +15,7 @@ export const Form = styled.form`
     flex-direction: column;
     gap: 2.5rem;
 
-    @media (max-width: 768px) {
+    @media (max-width: 1280px) {
         gap: 1.375rem;
 
         p {
@@ -30,7 +30,7 @@ export const FormRow = styled.div`
     justify-content: space-between;
     gap: 2.5rem;
 
-    @media (max-width: 768px) {
+    @media (max-width: 1280px) {
         flex-direction: column;
         gap: 1.375rem;
     }
@@ -39,7 +39,7 @@ export const FormRow = styled.div`
 export const SubmitWrapper = styled.div`
     margin: 1.5rem auto 0 auto;
 
-    @media (max-width: 768px) {
+    @media (max-width: 1280px) {
         margin-top: 1rem; 
         width: 100%;
     }

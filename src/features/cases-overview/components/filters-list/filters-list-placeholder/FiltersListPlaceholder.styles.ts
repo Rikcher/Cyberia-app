@@ -7,7 +7,7 @@ export const StyledFiltersListPlaceholder = styled.div`
     border-radius: 7px;
     animation: ${pulse} 1.5s infinite;
 
-    @media (max-width: 768px) {
+    @media (max-width: 1280px) {
         height: 2rem;
     }
 `;

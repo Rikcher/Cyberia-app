@@ -11,7 +11,11 @@ const StyledPageHeader = styled.h2<{ $marginBot: number }>`
         max-width: 22.5rem;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 1280px) {
+        padding: 0 1.5rem;
+    }
+
+    @media (max-width: 1024px) {
         font-size: 1.3125rem;
         font-family: "Rubik", sans-serif;
         font-weight: 500;

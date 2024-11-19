@@ -7,4 +7,8 @@ export const StyledEmptyPage = styled.div`
         font-size: 2.5rem;
         margin-bottom: 2rem;
     }
+
+    @media (max-width: 1280px) {
+        padding: 0 1.5rem;
+    }
 `

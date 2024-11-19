@@ -6,7 +6,7 @@ export const StyledFiltersList = styled.div`
     margin-bottom: 3.25rem;
     gap: 5rem;
 
-    @media (max-width: 768px) {
+    @media (max-width: 1024px) {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem 0.5rem;

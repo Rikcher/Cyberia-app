@@ -5,9 +5,15 @@ export const StyledBreadcrumbs = styled.h4`
     margin-bottom: 8.125rem;
     
     @media (max-width: 768px) {
+        font-family: "Rubik", sans-serif;
+    }
+
+    @media (max-width: 1024px) {
         margin-top: 2.875rem;
         margin-bottom: 1.75rem;
-        font-family: "Rubik", sans-serif;
+    }
+
+    @media (max-width: 1280px) {
         padding: 0 1.5rem;
     }
 

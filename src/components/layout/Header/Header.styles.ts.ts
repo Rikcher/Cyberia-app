@@ -7,6 +7,10 @@ export const StyledDesktopHeader = styled.header`
     align-items: center;
     margin: 4rem 1.5rem;
     max-width: 77.5rem;
+
+    @media (max-width: 1280px) {
+        padding: 0 1.5rem;
+    }
 `;
 export const StyledMobileHeader = styled.header`
     width: 100%;

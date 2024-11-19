@@ -19,7 +19,7 @@ export const StyledCardHover = styled.div`
         cursor: pointer;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 1280px) {
         opacity: 1;
         font-size: 0.8125rem;
         display: flex;
@@ -36,7 +36,7 @@ export const StyledCaseCard = styled.div<{$bgImgUrl: string}>`
     position: relative;
     overflow: hidden;
 
-    @media (max-width: 768px) {
+    @media (max-width: 1280px) {
         width: 100%;
     }
 `
@@ -44,7 +44,7 @@ export const StyledCaseCard = styled.div<{$bgImgUrl: string}>`
 export const StyledDescription = styled.div`
     overflow: hidden;
 
-    @media (max-width: 768px) {
+    @media (max-width: 1280px) {
         overflow: unset;
     }
 

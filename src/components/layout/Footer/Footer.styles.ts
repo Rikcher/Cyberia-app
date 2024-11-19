@@ -21,7 +21,7 @@ export const StyledFooter = styled.footer`
         }
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 1024px) {
         .inner-container {
             flex-direction: column;
             align-items: center;
@@ -41,7 +41,7 @@ export const StyledFooterContactDetails = styled(ContactDetails)`
     flex-wrap: wrap;
     gap: 1.5625rem;
 
-    @media (max-width: 768px) {
+    @media (max-width: 1024px) {
         gap: 1.3rem;
     }
 `
@@ -57,7 +57,7 @@ export const StyledFooterGeneralInformation = styled.nav`
         text-wrap: wrap
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 1024px) {
         align-items: center;
         gap: 0.75rem;
 
