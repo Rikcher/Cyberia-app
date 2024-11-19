@@ -1,5 +1,5 @@
 import React from "react";
-import { useWindowSizeStore } from "../../../store/useWindowSizeStore";
+import { useWindowSizeStore } from "../../../shared/store/useWindowSizeStore";
 import DesktopFooter from "./DesktopFooter";
 import MobileFooter from "./MobileFooter";
 

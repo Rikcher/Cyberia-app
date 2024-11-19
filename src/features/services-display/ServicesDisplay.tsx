@@ -10,7 +10,7 @@ import useCanvasPositionUpdater from "./hooks/useCanvasPositionUpdater";
 import ServicesHeader from "./components/ServicesHeader/ServicesHeader";
 import SelectedService from "./components/SelectedService/SelectedService";
 import HoveredService from "./components/HoveredService/HoveredService";
-import { useWindowSizeStore } from "../../store/useWindowSizeStore";
+import { useWindowSizeStore } from "../../shared/store/useWindowSizeStore";
 
 const ServicesDisplay = () => {
     const canvasRef = useRef<HTMLCanvasElement | null>(null);

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useWindowSizeStore } from "../../store/useWindowSizeStore"; 
+import { useWindowSizeStore } from "../store/useWindowSizeStore"; 
 
 const useWidthAboveThreshold = (threshold: number) => {
     const { width } = useWindowSizeStore();

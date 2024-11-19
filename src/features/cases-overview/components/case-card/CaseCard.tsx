@@ -6,7 +6,7 @@ import {
 } from "./CaseCard.styles";
 import useTextAnimation from "../../../../shared/hooks/useTextAnimation";
 import CardTitle from "./card-title/CardTitle";
-import { useWindowSizeStore } from "../../../../store/useWindowSizeStore";
+import { useWindowSizeStore } from "../../../../shared/store/useWindowSizeStore";
 
 interface CaseCardProps {
     bgImgUrl: string;

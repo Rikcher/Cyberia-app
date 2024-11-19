@@ -12,7 +12,7 @@ import {
     SubmitWrapper,
 } from "./ContactForm.styles";
 import { useTranslation } from "react-i18next";
-import { useWindowSizeStore } from "../../store/useWindowSizeStore";
+import { useWindowSizeStore } from "../../shared/store/useWindowSizeStore";
 
 interface ContactFormProps {
     marginBot: number;

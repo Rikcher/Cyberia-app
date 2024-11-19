@@ -4,7 +4,7 @@ import router from "./utils/Routes";
 import { ThemeProvider } from "styled-components";
 import { Toaster } from "sonner";
 import { useThemeStore } from "./features/theme-switch/services/store";
-import { useResizeListener } from "./store/useWindowSizeStore";
+import { useResizeListener } from "./shared/store/useWindowSizeStore";
 
 function App() {
     const { theme } = useThemeStore();
