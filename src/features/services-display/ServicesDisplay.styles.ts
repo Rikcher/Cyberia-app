@@ -1,10 +1,14 @@
 import styled from "styled-components";
 import CircleTextSvg from "/src/assets/CircleTextSvg.svg";
-import { rotate, pulse } from "../../shared/styles/animations"; 
+import { rotate } from "../../shared/styles/animations"; 
 
 
 export const CanvasWrapper = styled.div`
     height: 50rem;
+
+    @media (max-width: 1280px) {
+        padding: 0 1.5rem;
+    }
 `
 
 export const StyledCanvas = styled.canvas<{$isHovered: boolean}>`

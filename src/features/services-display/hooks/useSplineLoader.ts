@@ -1,11 +1,14 @@
 import { useEffect, useRef, useState } from "react";
 import { Application } from "@splinetool/runtime";
 import { showError } from "../../../shared/utils/toastUtils";
+import useWidthAboveThreshold from "../../../shared/hooks/useWidthAboveThreshold";
 
 const useSplineLoader = (canvasRef: React.RefObject<HTMLCanvasElement>) => {
     const appRef = useRef<Application | null>(null);
     const [hoveredArea, setHoveredArea] = useState<string | null>(null);
     const [selectedArea, setSelectedArea] = useState<string | null>(null); 
+
+    const isWidthAbove1300 = useWidthAboveThreshold(1300);
 
 
     useEffect(() => {
@@ -46,7 +49,7 @@ const useSplineLoader = (canvasRef: React.RefObject<HTMLCanvasElement>) => {
                 appRef.current = null;
             }
         };
-    }, [canvasRef]);
+    }, [canvasRef, isWidthAbove1300]);
 
     return {hoveredArea, selectedArea}; 
 };
