@@ -12,7 +12,7 @@ import SelectedService from "./components/SelectedService/SelectedService";
 import HoveredService from "./components/HoveredService/HoveredService";
 import { useWindowSizeStore } from "../../store/useWindowSizeStore";
 
-const PlanetObject = () => {
+const ServicesDisplay = () => {
     const canvasRef = useRef<HTMLCanvasElement | null>(null);
     const wrapperRef = useRef<HTMLDivElement | null>(null);
     const [canvasTopPosition, setCanvasTopPosition] = useState(0);
@@ -59,4 +59,4 @@ const PlanetObject = () => {
     );
 };
 
-export default PlanetObject;
+export default ServicesDisplay;

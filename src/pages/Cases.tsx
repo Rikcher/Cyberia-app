@@ -10,14 +10,18 @@ const Cases: React.FC = () => {
 
     return (
         <>
-            <PageHeader headerText={pageName} marginBot={4} />
-            <CasesOverview />
-            <PageHeader
-                headerText={t("feedback_form_title")}
-                marginBot={4.875}
-                className="full-width-bg"
-            />
-            <ContactForm marginBot={6.25} />
+            <section>
+                <PageHeader headerText={pageName} marginBot={4} />
+                <CasesOverview />
+            </section>
+            <section>
+                <PageHeader
+                    headerText={t("feedback_form_title")}
+                    marginBot={4.875}
+                    className="full-width-bg"
+                />
+                <ContactForm marginBot={6.25} />
+            </section>
         </>
     );
 };

@@ -3,7 +3,7 @@ import CircleTextSvg from "/src/assets/CircleTextSvg.svg";
 import { rotate } from "../../shared/styles/animations"; 
 
 
-export const CanvasWrapper = styled.div`
+export const CanvasWrapper = styled.section`
     height: 50rem;
 
     @media (max-width: 1280px) {
