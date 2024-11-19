@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import cardTitleSvg from "/src/assets/cardTitleSvg.svg";
 
-export const StyledCardTitle = styled.h3`
+export const StyledCardTitle = styled.div`
     width: 8rem;
     height: 8rem;
     border-radius: 5px;

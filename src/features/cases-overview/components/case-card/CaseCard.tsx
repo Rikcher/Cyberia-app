@@ -30,7 +30,7 @@ const CaseCard: React.FC<CaseCardProps> = ({
             startAnimation();
         };
 
-        if (cardElement && width > 768) {
+        if (cardElement) {
             cardElement.addEventListener("mouseenter", handleMouseEnter);
         }
 
@@ -44,10 +44,10 @@ const CaseCard: React.FC<CaseCardProps> = ({
     return (
         <StyledCaseCard $bgImgUrl={bgImgUrl}>
             {width > 768 && <CardTitle text={title} />}
-            <StyledCardHover ref={cardRef}>
+            <StyledCardHover ref={width > 768 ? cardRef : null}>
+                {width <= 768 && <CardTitle text={title} />}
                 <StyledDescription ref={textWrapperRef}>
-                    {width <= 768 && <CardTitle text={title} />}
-                    {description}
+                    <p>{description}</p>
                 </StyledDescription>
             </StyledCardHover>
         </StyledCaseCard>

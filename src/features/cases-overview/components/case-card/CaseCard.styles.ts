@@ -22,6 +22,10 @@ export const StyledCardHover = styled.div`
     @media (max-width: 768px) {
         opacity: 1;
         font-size: 0.8125rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-items: start;
     }
 `
 export const StyledCaseCard = styled.div<{$bgImgUrl: string}>`
@@ -37,7 +41,7 @@ export const StyledCaseCard = styled.div<{$bgImgUrl: string}>`
     }
 `
 
-export const StyledDescription = styled.p`
+export const StyledDescription = styled.div`
     overflow: hidden;
 
     @media (max-width: 768px) {

@@ -7,7 +7,7 @@ interface CardTitleProps {
 const CardTitle: React.FC<CardTitleProps> = ({ text }) => {
     return (
         <StyledCardTitle>
-            {text}
+            <h3>{text}</h3>
             <StyledCardTitleSvg />
         </StyledCardTitle>
     );
