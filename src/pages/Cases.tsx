@@ -15,6 +15,7 @@ const Cases: React.FC = () => {
             <PageHeader
                 headerText={t("feedback_form_title")}
                 marginBot={4.875}
+                className="full-width-bg"
             />
             <ContactForm marginBot={6.25} />
         </>

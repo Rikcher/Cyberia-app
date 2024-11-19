@@ -45,4 +45,9 @@ export const StyledSubmitButton = styled.button.attrs({type: "submit"})<{$disabl
                 height: 0;
         `};
     }
+
+    @media (max-width: 768px) {
+        width: 100%;
+        padding: 1rem 2rem;
+    }
 `

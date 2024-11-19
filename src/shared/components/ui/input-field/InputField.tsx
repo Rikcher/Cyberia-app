@@ -39,6 +39,7 @@ const InputField: React.FC<InputFieldProps> = ({
                             required: t("empty_input"),
                             ...validationRule,
                         })}
+                        placeholder={t(name)}
                     />
                 ) : (
                     <StyledInput
@@ -46,6 +47,7 @@ const InputField: React.FC<InputFieldProps> = ({
                             required: t("empty_input"),
                             ...validationRule,
                         })}
+                        placeholder={t(name)}
                     />
                 )}
             </StyledFieldset>

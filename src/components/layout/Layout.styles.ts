@@ -13,7 +13,7 @@ export const StyledMain = styled.main`
     flex-grow: 1;
     width: 100%;
     @media (max-width: 768px) {
-        padding: 0 1.5rem;
+        /* padding: 0 1.5rem; */
     }
 `;
 

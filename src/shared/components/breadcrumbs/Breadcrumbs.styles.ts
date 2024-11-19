@@ -8,6 +8,7 @@ export const StyledBreadcrumbs = styled.h4`
         margin-top: 2.875rem;
         margin-bottom: 1.75rem;
         font-family: "Rubik", sans-serif;
+        padding: 0 1.5rem;
     }
 
     .breadcrumb-current {

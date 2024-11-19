@@ -12,6 +12,7 @@ import {
     SubmitWrapper,
 } from "./ContactForm.styles";
 import { useTranslation } from "react-i18next";
+import { useWindowSizeStore } from "../../store/useWindowSizeStore";
 
 interface ContactFormProps {
     marginBot: number;
@@ -21,6 +22,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ marginBot }) => {
     const methods = useForm();
     const { onSubmit } = useContactForm(methods);
     const { t } = useTranslation();
+    const { width } = useWindowSizeStore();
 
     return (
         <FormWrapper $marginBot={marginBot}>
@@ -36,10 +38,13 @@ const ContactForm: React.FC<ContactFormProps> = ({ marginBot }) => {
                         name="message"
                         isTextArea
                     />
-                    <Checkbox uid="terms-checkbox" label={t("consent")} />
+                    {width > 768 && (
+                        <Checkbox uid="terms-checkbox" label={t("consent")} />
+                    )}
                     <SubmitWrapper>
                         <SubmitButton label={t("submit")} />
                     </SubmitWrapper>
+                    {width <= 768 && <p>{t("consent_mobile")}</p>}
                 </Form>
             </FormProvider>
         </FormWrapper>

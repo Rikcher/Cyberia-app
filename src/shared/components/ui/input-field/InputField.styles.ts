@@ -18,6 +18,17 @@ export const StyledInput = styled.input`
     padding: 0.375rem 1.25rem 1rem 1.25rem;
     color: ${({theme}) => theme.colors.text};
     font-size: inherit;
+    &::placeholder {
+        opacity: 0;
+    }
+
+    @media (max-width: 768px) {
+        padding: 1rem 1.25rem 1rem 1.25rem;
+        &::placeholder {
+            opacity: 1;
+            color: ${({theme}) => theme.colors.text};
+        }
+    }
 `;
 
 export const StyledInputError = styled.p`
@@ -38,6 +49,10 @@ export const StyledLegend = styled.legend`
     padding: 0 0.9375rem;
     color: ${({theme}) => theme.colors.text}; 
     font-weight: 200;
+
+    @media (max-width: 768px) {
+        display: none;
+    }
 `;
 
 export const StyledTextArea = styled.textarea`
@@ -50,4 +65,15 @@ export const StyledTextArea = styled.textarea`
     color: ${({theme}) => theme.colors.text};
     font-size: inherit;
     resize: none;
+    &::placeholder {
+        opacity: 0;
+    }
+
+    @media (max-width: 768px) {
+        padding: 1rem 1.25rem 1rem 1.25rem;
+        &::placeholder {
+            opacity: 1;
+            color: ${({theme}) => theme.colors.text};
+        }
+    }
 `;
