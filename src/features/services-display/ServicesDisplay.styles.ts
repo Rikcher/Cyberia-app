@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import CircleTextSvg from "/src/assets/CircleTextSvg.svg";
-import { rotate } from "../../shared/styles/animations"; 
+import { rotate, pulse } from "../../shared/styles/animations"; 
 
 
 export const CanvasWrapper = styled.div`

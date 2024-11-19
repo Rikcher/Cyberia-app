@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Application } from "@splinetool/runtime";
+import { showError } from "../../../shared/utils/toastUtils";
 
 const useSplineLoader = (canvasRef: React.RefObject<HTMLCanvasElement>) => {
     const appRef = useRef<Application | null>(null);
@@ -32,7 +33,7 @@ const useSplineLoader = (canvasRef: React.RefObject<HTMLCanvasElement>) => {
                         }
                     });
                 } catch (error) {
-                    console.error("Failed to load the Spline scene:", error);
+                    showError("Failed to load the Spline scene");
                 }
             }
         };
