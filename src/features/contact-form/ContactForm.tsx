@@ -15,10 +15,10 @@ import { useTranslation } from "react-i18next";
 import { useWindowSizeStore } from "../../shared/store/useWindowSizeStore";
 
 interface ContactFormProps {
-    marginBot: number;
+    marginBot?: number;
 }
 
-const ContactForm: React.FC<ContactFormProps> = ({ marginBot }) => {
+const ContactForm: React.FC<ContactFormProps> = ({ marginBot = 0 }) => {
     const methods = useForm();
     const { onSubmit } = useContactForm(methods);
     const { t } = useTranslation();
@@ -44,6 +44,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ marginBot }) => {
                     <SubmitWrapper>
                         <SubmitButton
                             label={width > 1280 ? t("submit") : t("send")}
+                            ariaLabel="contact-form-submit"
                         />
                     </SubmitWrapper>
                     {width <= 768 && <p>{t("consent_mobile")}</p>}

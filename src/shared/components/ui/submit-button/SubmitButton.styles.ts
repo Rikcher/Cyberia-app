@@ -3,7 +3,7 @@ import { pulse } from "../../../styles/animations";
 import { DoubleCircleHover } from "../../../styles/hoverStyles";
 
 
-export const StyledLabel = styled.p`
+export const StyledLabel = styled.span`
     position: relative;
     z-index: 3;
     transition: scale 0.3s ease-in-out 0.3s;

@@ -27,6 +27,10 @@ const InputField: React.FC<InputFieldProps> = ({
         formState: { errors },
     } = useFormContext();
     const { t } = useTranslation();
+    const registerProps = register(name, {
+        required: t("empty_input"),
+        ...validationRule,
+    });
 
     return (
         <StyledInputField>
@@ -35,24 +39,22 @@ const InputField: React.FC<InputFieldProps> = ({
                 {isTextArea ? (
                     <StyledTextArea
                         rows={5}
-                        {...register(name, {
-                            required: t("empty_input"),
-                            ...validationRule,
-                        })}
+                        {...registerProps}
                         placeholder={t(name)}
+                        aria-label={name}
                     />
                 ) : (
                     <StyledInput
-                        {...register(name, {
-                            required: t("empty_input"),
-                            ...validationRule,
-                        })}
+                        {...registerProps}
                         placeholder={t(name)}
+                        aria-label={name}
                     />
                 )}
             </StyledFieldset>
             {errors[name] && (
-                <StyledInputError>{`${errors[name].message}`}</StyledInputError>
+                <StyledInputError
+                    aria-label={`${name}-error`}
+                >{`${errors[name].message}`}</StyledInputError>
             )}
         </StyledInputField>
     );
