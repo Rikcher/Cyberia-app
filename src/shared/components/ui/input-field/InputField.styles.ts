@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const StyledFieldset = styled.fieldset<{$hasError: boolean}>`
     border: solid 1px;
@@ -9,14 +9,14 @@ export const StyledFieldset = styled.fieldset<{$hasError: boolean}>`
     width: 100%;
 `;
 
-export const StyledInput = styled.input`
+const FieldCompoennt = css`
     border: none;
     outline: none;
     background-color: transparent;
     width: 100%;
     height: 100%;
     padding: 0.375rem 1.25rem 1rem 1.25rem;
-    color: ${({theme}) => theme.colors.text};
+    color: ${({ theme }) => theme.colors.text};
     font-size: inherit;
     &::placeholder {
         opacity: 0;
@@ -27,9 +27,19 @@ export const StyledInput = styled.input`
         padding: 1rem 1.25rem 1rem 1.25rem;
         &::placeholder {
             opacity: 1;
-            color: ${({theme}) => theme.colors.text};
+            color: ${({ theme }) => theme.colors.text};
         }
     }
+`;
+
+export const StyledInput = styled.input`
+    ${FieldCompoennt}
+`;
+
+
+export const StyledTextArea = styled.textarea`
+    ${FieldCompoennt}
+    resize: none; 
 `;
 
 export const StyledInputError = styled.p`
@@ -53,29 +63,5 @@ export const StyledLegend = styled.legend`
 
     @media (max-width: 768px) {
         display: none;
-    }
-`;
-
-export const StyledTextArea = styled.textarea`
-    border: none;
-    outline: none;
-    background-color: transparent;
-    width: 100%;
-    height: 100%;
-    padding: 0.375rem 1.25rem 1rem 1.25rem;
-    color: ${({theme}) => theme.colors.text};
-    font-size: inherit;
-    resize: none;
-    &::placeholder {
-        opacity: 0;
-        font-family: inherit;
-    }
-
-    @media (max-width: 768px) {
-        padding: 1rem 1.25rem 1rem 1.25rem;
-        &::placeholder {
-            opacity: 1;
-            color: ${({theme}) => theme.colors.text};
-        }
     }
 `;
