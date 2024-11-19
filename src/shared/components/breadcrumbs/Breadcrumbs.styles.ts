@@ -11,6 +11,7 @@ export const StyledBreadcrumbs = styled.h4`
     @media (max-width: 1024px) {
         margin-top: 2.875rem;
         margin-bottom: 1.75rem;
+        font-size: 0.75rem;
     }
 
     @media (max-width: 1280px) {
@@ -19,7 +20,6 @@ export const StyledBreadcrumbs = styled.h4`
 
     .breadcrumb-current {
         color: ${({theme}) => theme.colors.graySecondary};
-        font-size: 0.75rem;
     }
 `
 
