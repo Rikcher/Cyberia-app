@@ -1,8 +1,10 @@
 import { useThemeStore } from "./services/store";
-import StyledCircle from "./styles/StyledCircle";
-import StyledMoon from "./styles/StyledMoon";
-import StyledSun from "./styles/StyledSun";
-import StyledThemeSwitch from "./styles/StyledThemeSwitch";
+import {
+    StyledCircle,
+    StyledThemeSwitch,
+    StyledMoon,
+    StyledSun,
+} from "./ThemeSwitch.styles";
 
 const ThemeSwitch = () => {
     const { theme, toggleTheme } = useThemeStore();
