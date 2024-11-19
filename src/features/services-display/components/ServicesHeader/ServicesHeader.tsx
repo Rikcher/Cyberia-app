@@ -1,5 +1,5 @@
 import { StyledServicesHeader } from "./ServicesHeader.styles";
-import SvgLogo from "../../../../shared/components/ui/SvgLogo/SvgLogo";
+import SvgLogo from "../../../../shared/components/ui/svg-logo/SvgLogo";
 
 interface ServicesHeaderProps {
     isFaded: boolean;

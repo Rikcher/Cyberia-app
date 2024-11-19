@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import InputField from "../../../shared/components/ui/InputField/InputField";
+import InputField from "../../../shared/components/ui/input-field/InputField";
 import { EMAIL_REGEX } from "../../../shared/utils/regexUtils";
 
 const ContactFormEmailField = () => {
