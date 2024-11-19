@@ -32,3 +32,13 @@ body {
     font-style: normal;
 }
 
+@media (max-width: 1024px) {
+    body {
+        font-size: 13px;
+        font-family: 'Open Sans', sans-serif; 
+    }
+}
+
+:root:has(.no-doc-scroll) { 
+    overflow: hidden;
+}
