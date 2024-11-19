@@ -2,7 +2,7 @@ import React from "react";
 import Header from "./Header/Header";
 import Footer from "./Footer/Footer";
 import { StyledLayout, StyledMain } from "./Layout.styles";
-import BreadcrumbsDisplay from "../../features/breadcrumbs/components/BreadcrumbsDisplay";
+import Breadcrumbs from "../../shared/components/breadcrumbs/Breadcrumbs";
 import { Outlet } from "react-router-dom";
 
 const Layout: React.FC = () => {
@@ -10,7 +10,7 @@ const Layout: React.FC = () => {
         <StyledLayout>
             <Header />
             <StyledMain>
-                <BreadcrumbsDisplay />
+                <Breadcrumbs />
                 <Outlet />
             </StyledMain>
             <Footer />

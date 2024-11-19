@@ -15,9 +15,8 @@ const Nav: React.FC<NavProps> = ({ pages }) => {
     return (
         <>
             {pages.map((page) => (
-                <li>
+                <li key={`${page.label}-page`}>
                     <Link
-                        key={`${page.label}-page`}
                         aria-label={page.label}
                         className="nav-link"
                         to={page.path}

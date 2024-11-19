@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const StyledBreadcrumbsDisplay = styled.h4`
+export const StyledBreadcrumbs = styled.h4`
     color: ${({theme}) => theme.colors.gray};
     margin-bottom: 8.125rem;
 
@@ -9,4 +9,3 @@ const StyledBreadcrumbsDisplay = styled.h4`
     }
 `
 
-export default StyledBreadcrumbsDisplay;
