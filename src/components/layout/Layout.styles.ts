@@ -9,9 +9,11 @@ export const StyledLayout = styled.div`
 `;
 
 export const StyledMain = styled.main`
-    margin: 0 1.5rem;
     max-width: 77.5rem;
     flex-grow: 1;
     width: 100%;
+    @media (max-width: 768px) {
+        padding: 0 1.5rem;
+    }
 `;
 

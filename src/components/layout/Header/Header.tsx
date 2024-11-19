@@ -1,6 +1,6 @@
 import MobileHeader from "./MobileHeader";
 import DesktopHeader from "./DesktopHeader";
-import { useWindowSizeStore } from "../../../store/useWindowSizeStore.ts";
+import { useWindowSizeStore } from "../../../store/useWindowSizeStore";
 
 const Header = () => {
     const { width } = useWindowSizeStore();
