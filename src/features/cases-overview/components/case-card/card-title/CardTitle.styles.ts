@@ -16,6 +16,21 @@ export const StyledCardTitle = styled.h3`
     font-size: 1.5rem;
     font-weight: 600;
     text-align: center;
+
+    @media (max-width: 768px) {
+        background-color: transparent;
+        font-family: "Rubik", sans-serif;
+        font-size: 1.125rem;
+        position: relative;
+        width: auto;
+        height: auto;
+        display: block;
+        text-align: left;
+        top: 0;
+        right: 0;
+        margin-bottom: 0.375rem;
+        font-weight: 400;
+    }
 `
 
 export const StyledCardTitleSvg = styled.div`
@@ -26,5 +41,11 @@ export const StyledCardTitleSvg = styled.div`
     position: absolute;
     top: -0.375rem;
     right: -0.375rem;
+
+    @media (max-width: 768px) {
+        background-color: ${({theme}) => theme.colors.text};
+        top: -2.25rem;
+        left: 0;
+    }
 `
 

@@ -1,3 +1,4 @@
+import { MouseEventHandler } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
@@ -8,9 +9,10 @@ interface Page {
 
 interface NavProps {
     pages: Page[];
+    onClick?: MouseEventHandler<HTMLAnchorElement>;
 }
 
-const Nav: React.FC<NavProps> = ({ pages }) => {
+const Nav: React.FC<NavProps> = ({ pages, onClick }) => {
     const { t } = useTranslation();
     return (
         <>
@@ -20,6 +22,7 @@ const Nav: React.FC<NavProps> = ({ pages }) => {
                         aria-label={page.label}
                         className="nav-link"
                         to={page.path}
+                        onClick={onClick}
                     >
                         {t(page.label)}
                     </Link>

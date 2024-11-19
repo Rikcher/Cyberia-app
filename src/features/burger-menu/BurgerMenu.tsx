@@ -9,7 +9,12 @@ import Nav from "../../shared/components/nav/Nav";
 import { commonPages } from "../../shared/utils/navigationData";
 import { useTranslation } from "react-i18next";
 
-const BurgerMenu: React.FC<{ isOpen: boolean }> = ({ isOpen }) => {
+interface BurgerMenuProps {
+    isOpen: boolean;
+    setIsOpen: (value: boolean) => void;
+}
+
+const BurgerMenu: React.FC<BurgerMenuProps> = ({ isOpen, setIsOpen }) => {
     const { t } = useTranslation();
 
     return (
@@ -18,7 +23,7 @@ const BurgerMenu: React.FC<{ isOpen: boolean }> = ({ isOpen }) => {
             className={isOpen ? "no-doc-scroll" : ""}
         >
             <StyledBurgerNav>
-                <Nav pages={commonPages} />
+                <Nav pages={commonPages} onClick={() => setIsOpen(!isOpen)} />
             </StyledBurgerNav>
             <StyledLine />
             <StyledBurgerMenuHeader>{t("contacts")}:</StyledBurgerMenuHeader>

@@ -4,6 +4,7 @@ export const StyledFiltersList = styled.div`
     display: flex;
     justify-content: space-between;
     margin-bottom: 3.25rem;
+    gap: 5rem;
 
     @media (max-width: 768px) {
         display: grid;
