@@ -9,7 +9,7 @@ const MobileHeader: React.FC = () => {
 
     return (
         <StyledMobileHeader>
-            <Logo width={8.125} />
+            <Logo width={5.75} />
             <BurgerButton isOpen={isOpen} setIsOpen={setIsOpen} />
             <BurgerMenu isOpen={isOpen} setIsOpen={setIsOpen} />
         </StyledMobileHeader>

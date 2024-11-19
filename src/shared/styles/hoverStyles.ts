@@ -31,4 +31,12 @@ export const DoubleCircleHover = css`
             transform: translate(-50%, -50%) scale(310);
         }
     }
+
+    @media (max-width: 768px) {
+        &:hover {
+        &:before, &:after {
+            transform: translate(-50%, -50%) scale(500);
+        }
+    }
+    }
 `

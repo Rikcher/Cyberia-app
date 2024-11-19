@@ -16,5 +16,9 @@ export const StyledFooterNav = styled.ul`
             text-decoration: underline;
         }
     }
+
+    @media (min-width: 768px) {
+        gap: 1.3rem;
+    }
 `
 
